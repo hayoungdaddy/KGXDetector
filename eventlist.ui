@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EventList</class>
+ <widget class="QDialog" name="EventList">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1734</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Event List</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="minimumSize">
+      <size>
+       <width>560</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>560</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox { 
+	border: 2px solid gray; 
+	border-radius: 9px; 
+	margin-top: 0.5em
+}
+
+QGroupBox::title {
+	subcontrol-origin: margin;
+	left: 10px;
+	padding: 0 3px 0 3px;
+}</string>
+     </property>
+     <property name="title">
+      <string>Event List</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QTableWidget" name="eventTable">
+        <property name="dragDropOverwriteMode">
+         <bool>false</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>100</number>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>Event Time</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Briefing Board</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>mb Graph</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Location Viewer</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QGroupBox { 
+	border: 2px solid gray; 
+	border-radius: 9px; 
+	margin-top: 0.5em
+}
+
+QGroupBox::title {
+	subcontrol-origin: margin;
+	left: 10px;
+	padding: 0 3px 0 3px;
+}</string>
+     </property>
+     <property name="title">
+      <string>X-Corr. Detector Result</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>Standard Reference</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>150</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <item>
+           <property name="text">
+            <string>All (Max Coeff.)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NK1</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NK2</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NK3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NK4</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NK5</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NK6</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="showAllButton">
+          <property name="text">
+           <string>Show All Picks</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="pickTable">
+        <property name="dragDropOverwriteMode">
+         <bool>false</bool>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>90</number>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>P Arrival Time</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Station</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>mb</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>NK1 Coeff.</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>NK2 Coeff.</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>NK3 Coeff.</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>NK4 Coeff.</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>NK5 Coeff.</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>NK6 Coeff.</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Threshold</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Report</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
